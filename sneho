@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #proposal {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div id="main">
+    <h1>Will you be my bestfriend?</h1>
+    <button onclick="showProposal()">Yes</button>
+    <button onclick="noResponse()">No</button>
+</div>
+
+<div id="proposal">
+    <h2>💖 Yes! I would love to be your bestfriend! 💖</h2>
+    <p>Congratulations! Here's my WhatsApp number:</p>
+    <a id="whatsappLink" href="#" target="_blank">WhatsApp Link</a>
+</div>
+
+<script>
+    function showProposal() {
+        document.getElementById("main").style.display = "none";
+        document.getElementById("proposal").style.display = "block";
+
+        // Replace this with your own WhatsApp number or link
+        var whatsappNumber = "+919073677341";
+        var message = "Hi! I am happy to be yours bestfriend ❤😘";
+        var whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+        document.getElementById("whatsappLink").href = whatsappLink;
+    }
+
+    function noResponse() {
+        alert("I understand. Take your time!");
+    }
+</script>
+
+</body>
+</html>
